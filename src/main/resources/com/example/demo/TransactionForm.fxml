@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.demo.TransactionFormController"
+      spacing="20" alignment="CENTER"
+      style="-fx-background-color: #f5f5f5;">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Button text="Back" 
+                onAction="#handleBack"
+                style="-fx-background-color: #757575; -fx-text-fill: white;"/>
+        <Text fx:id="formTitle" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Add Transaction"/>
+    </HBox>
+
+    <VBox spacing="15" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 5;">
+        <GridPane vgap="10" hgap="10">
+            <Label text="Date:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="datePicker" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Description:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="descriptionField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Amount:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="amountField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Type:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="typeComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Save" 
+                    onAction="#handleSave"
+                    style="-fx-background-color: #4caf50; -fx-text-fill: white;"/>
+            <Button text="Cancel" 
+                    onAction="#handleCancel"
+                    style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+        </HBox>
+    </VBox>
+</VBox> 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionsListController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="537.0" spacing="10">
+        <Button onAction="#handleBackToHome" style="-fx-background-color: #757575; -fx-text-fill: white;" text="Back to Home" />
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Transactions" />
+    </HBox>
+
+    <TableView fx:id="transactionsTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="dateColumn" prefWidth="100" text="Date" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="200" text="Description" />
+            <TableColumn fx:id="amountColumn" prefWidth="100" text="Amount" />
+            <TableColumn fx:id="typeColumn" prefWidth="100" text="Type" />
+            <TableColumn fx:id="actionsColumn" prefWidth="150" text="Actions" />
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="saveButton" onAction="#handleSaveTransactions" text="Save Transactions" />
+        <Button onAction="#handleAddTransaction" style="-fx-background-color: #4caf50; -fx-text-fill: white;" text="Add Transaction" />
+    </HBox>
+</VBox>
