@@ -48,7 +48,7 @@ public class CategoryData {
             
             // Write transactions
             for (Category c : categories) {
-                writer.printf("%d,%s,%.2f,%.2fn",
+                writer.printf("%d,%s,%.2f,%.2f\n",
                     c.getId(),
                     c.getName(),
                     c.getBudget(),
