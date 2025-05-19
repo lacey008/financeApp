@@ -42,6 +42,7 @@ public class CategoryData {
     // Save categories to CSV file
     public static void saveCategories() {
         try (PrintWriter writer = new PrintWriter(new FileWriter(CSV_FILE))) {
+            
             // Write header
             writer.println("ID,Name,Budget,Balance");
             
