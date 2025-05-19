@@ -11,6 +11,7 @@ public class FinanceApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Data.loadTransactions();
+        CategoryData.loadTransactions();
         FXMLLoader loader = new FXMLLoader(FinanceApp.class.getResource("HomePage.fxml"));
         Parent root = loader.load();
         

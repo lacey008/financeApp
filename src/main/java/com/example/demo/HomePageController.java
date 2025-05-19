@@ -47,4 +47,17 @@ public class HomePageController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void handleViewCategories() {
+        try {
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("CategoriesList.fxml"));
+            Parent root = loader.load();
+            
+            Stage stage = (Stage) totalTransactionsText.getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 } 
